@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <conio.h>
  void main() {
    int num1, num2, i ;
+   char ch;
+   do{
    printf("enter First number\n");
    scanf("%d",&num1);
    printf("enter second number\n");
@@ -22,7 +25,12 @@ else if (num1>num2){
         printf("\n");      
     }
    }
-   
+   printf("\nDo you want to rerun your program? (y/n): ");
+        ch = getche(); 
+        ch = tolower(ch);
+        printf("\n\n");
+
+    } while(ch == 'y');
 
    getch();
 }

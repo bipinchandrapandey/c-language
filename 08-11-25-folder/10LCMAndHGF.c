@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <conio.h>
+#include <ctype.h>
 void main()
 {
   int num1, num2, LCM, HGF, i;
+  char ch;
+  do{
   printf("Enter First Number\n");
   scanf("%d", &num1);
   printf("Enter Second Number\n");
@@ -15,6 +18,13 @@ void main()
   LCM = (num1 * num2) / HGF;
   printf("HGF of number %d And number %d is : %d\n", num1, num2, HGF);
   printf("LCM of number %d And number %d is : %d\n", num1, num2, LCM);
+   printf("\nDo you want to rerun your program? (y/n): ");
+        ch = getche();
+        ch = tolower(ch);
+        printf("\n\n");
+
+    } while (ch == 'y');
+
 
   getch();
 }

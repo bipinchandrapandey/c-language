@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <conio.h>
+#include <ctype.h>
  void main() {
-   int num,i,sumSquare;
+  char ch;
+  do{
+   int num,i,sumSquare=0;
    printf("Enter the number \n");
    scanf("%d",&num);
    if(num>0){
@@ -11,5 +14,11 @@
 }
 printf("%d",sumSquare);
 }
+ printf("\nDo you want to rerun your program? (y/n): ");
+        ch = getche();
+        ch = tolower(ch);
+        printf("\n\n");
+
+    } while (ch == 'y');
    getch();
 }

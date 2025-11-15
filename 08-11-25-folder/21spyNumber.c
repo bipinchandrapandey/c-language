@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <conio.h>
+#include <ctype.h>
  void main() {
+  char ch;
+  do{
    int num , i ,s,sumofdigit=0,multiplyofdigit=1;
      printf("Enter the number \n");
     scanf("%d", &num);
@@ -17,5 +20,11 @@ if(sumofdigit==multiplyofdigit){
 else{
     printf("this is not spy number");
 }
+ printf("\nDo you want to rerun your program? (y/n): ");
+        ch = getche();
+        ch = tolower(ch);
+        printf("\n\n");
+
+    } while (ch == 'y');
    getch();
 }
