@@ -1,39 +1,47 @@
 #include <stdio.h>
 #include <conio.h>
- void main() {
-   int Hindi, Math, English, Sanskrit ,Science ,Total ,percentage;
-   printf("Enter the obtain mark  in Hindi\n");
-   scanf("%d", &Hindi);
-   printf("Enter the obtain mark  in Math\n");
-   scanf("%d",&Math);
-   printf("Enter the obtain mark  in English \n");
-   scanf("%d", &English);
-   printf("Enter the obtain mark  in Sanskri\n ");
-   scanf("%d", &Sanskrit);
-   printf("Enter the obtain mark  in Science\n");
-   scanf("%d", &Science);
-   if(Hindi>30 || Math<30 || English<30 || Sanskrit<30 || Science<30){
-   Total = Hindi+Math+English+Sanskrit+Science;
-   percentage= (Total)/5;
-   printf("Toal percentege %d \n", percentage);
-   if(percentage>=75){
-    printf("dectension mark\n");
-   }
-   else if (percentage>=60){
-     printf("first division\n");
-   }
-   else if (percentage>=50){
-     printf("second division\n");
-   }
-   else{
-     printf("fail");
-   }
-}
-else{
-   printf("fail");
-}
-   
 
+void main() {
+    int Hindi, Math, English, Sanskrit, Science, Total, percentage;
 
-   getch();
+    printf("Enter the obtained marks in Hindi: ");
+    scanf("%d", &Hindi);
+
+    printf("Enter the obtained marks in Math: ");
+    scanf("%d", &Math);
+
+    printf("Enter the obtained marks in English: ");
+    scanf("%d", &English);
+
+    printf("Enter the obtained marks in Sanskrit: ");
+    scanf("%d", &Sanskrit);
+
+    printf("Enter the obtained marks in Science: ");
+    scanf("%d", &Science);
+
+    // Check if any subject is less than 30 (Fail condition)
+    if (Hindi < 30 || Math < 30 || English < 30 || Sanskrit < 30 || Science < 30) {
+        printf("Fail (Because you scored less than 30 in one or more subjects)\n");
+    } 
+    else {
+        Total = Hindi + Math + English + Sanskrit + Science;
+        percentage = Total / 5;
+
+        printf("Total percentage = %d\n", percentage);
+
+        if (percentage >= 75) {
+            printf("Distinction\n");
+        }
+        else if (percentage >= 60) {
+            printf("First Division\n");
+        }
+        else if (percentage >= 50) {
+            printf("Second Division\n");
+        }
+        else {
+            printf("Pass\n");
+        }
+    }
+
+    getch();
 }
