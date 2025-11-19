@@ -3,9 +3,9 @@
 #include <ctype.h>
 void main()
 {
-  int num1, num2, LCM, HGF, i;
   char ch;
   do{
+    int num1, num2, LCM, HGF, i;
   printf("Enter First Number\n");
   scanf("%d", &num1);
   printf("Enter Second Number\n");

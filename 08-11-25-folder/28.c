@@ -3,12 +3,12 @@
 #include <conio.h>
 int main() {
     char ch;
-    int num, i;
-    do {
 
+    do {
+    int num, i;
         
 
-        printf("\n\nDo you want to Rerun your program? (y/n): ");
+        printf("\n\nDo you want to rerun your program? (y/n): ");
         ch = getche();  // read character
         ch = tolower(ch);
         printf("\n\n");
