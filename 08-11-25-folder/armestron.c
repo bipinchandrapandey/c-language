@@ -1,32 +1,42 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <conio.h>
+#include <math.h>
 
 void main() {
     char ch;
 
     do {
-        int num, temnum, t, ag = 0;
+        int num, temp, digitCount = 0, rem;
+        int sum = 0;
 
         printf("Enter the number: ");
         scanf("%d", &num);
 
-        temnum = num;  
+        temp = num;
 
-        while (num != 0) {
-            t = num % 10;       
-            ag = ag + (t * t * t);  
-            num = num / 10;      
+        // Count digits
+        int t = num;
+        while (t != 0) {
+            digitCount++;
+            t = t / 10;
         }
 
-        if (ag == temnum) {
+        // Armstrong calculation
+        t = num;
+        while (t != 0) {
+            rem = t % 10;   
+            sum = sum + pow(rem, digitCount); 
+            t = t / 10;
+        }
+
+        if (sum == num) {
             printf("This is an Armstrong number\n");
         } else {
             printf("This is not an Armstrong number\n");
         }
-        printf("\n\n");
 
-        printf("Do you want to rerun your program? (y/n): ");
+        printf("\nDo you want to rerun your program? (y/n): ");
         ch = getche();
         ch = tolower(ch);
         printf("\n\n");
