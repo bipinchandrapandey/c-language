@@ -44,6 +44,7 @@ void main()
         printf("\n");
 
     } while (ch == 'y');
+    printf("you have cancelled the execution");
 
     getch();
 }

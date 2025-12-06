@@ -14,7 +14,8 @@ int fact(int n){
    printf("Enter the number ");
    scanf("%d",&num);
    result = fact(num);
-   printf("the factoria is %d",result);
+   printf("the factoria is %d\n\n",result);
+   main();
 
 
    getch();
